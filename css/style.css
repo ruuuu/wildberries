@@ -1,0 +1,37 @@
+/*чтобы узнать какие шрифты ипользуются в макете, нужен плагин Font Fascia, заходим в макет->меню-> plugins Font ->Fascia  и появится списк шрифтов */
+.navigation{
+  list-style: none;
+  padding: 0;
+}
+
+.navigation-link{ /*сыылки в  меню a*/
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgba(147, 150, 153, 1);
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+}
+
+.button{
+  display: flex;
+  align-items:center;
+  background: #4592FF;
+  border-radius: 20px;
+  border-color:transparent;
+  padding: 10px 20px;
+  color: #ffffff;
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.button-icon{
+  margin-right: 10px;
+}
