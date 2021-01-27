@@ -1,7 +1,23 @@
 /*чтобы узнать какие шрифты ипользуются в макете, нужен плагин Font Fascia, заходим в макет->меню-> plugins Font ->Fascia  и появится списк шрифтов */
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin:0;
+  font-family: 'Lato', sans-serif;
+  color: #262D33;
+}
+
+.header{
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
 .navigation{
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .navigation-link{ /*сыылки в  меню a*/
@@ -32,6 +48,186 @@
   cursor: pointer;
 }
 
-.button-icon{
+.button-icon, .button-price{
   margin-right: 10px;
+}
+
+.button-icon:last-child{
+  margin-right: 0;
+  margin-left: 10px;
+}
+
+.slider{
+  position: relative; /*родитель для кнопок -переклбчалок, отнительно него будем сдвигать*/
+}
+
+.slide{
+  padding-top: 90px;
+  padding-bottom: 110px;
+
+}
+
+.slide-1{
+  background-color:  #B4D1E0;
+  background-image: url("../img/background.png");
+  background-repeat: no-repeat;
+  background-size: 935px 570px;
+  background-position: top right 120px; /*в правый верхний  угол отправляем картинку  и  смещаем на 120 от правого края */
+}
+
+.label{
+  padding: 5px 12px;
+  background-color: #3DC47E;
+  border-radius: 3px;
+  color: white;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.slide-title{
+  font-style: normal;
+  font-weight: bold;
+  font-size: 55px;
+  line-height: 70px;
+  font-family: 'Roboto Slab', serif;
+
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.slide-descripton{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  color: #4B5157;
+  max-width: 335px;
+  margin-bottom: 40px;
+}
+
+.slider-nav{
+  position: absolute;
+  top: 50%; /*отступ от верхнего края  родителя*/
+  width: 100%;
+  transform: translateY(-50%);/*сдвиг по оси у вверх*/
+
+}
+
+.slider-button{
+  background-color: transparent;
+  border: none;
+  opacity: 0.4;
+}
+
+
+/* .button span:nth-child(2){
+    margin-left:10px;
+}  */
+
+.card{
+  min-height: 370px; /*дя переполнения тектсом, чтоб тектс не вылезал, карчока бдет увеличиваться по высоте */
+  background-color: rgba(0, 0, 0, 0.25);
+  
+  background-repeat: no-repeat;
+  
+  background-position: top right;
+
+  border-radius: 10px;
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+
+
+.card-1{
+  background-image: url("../img/sumka.png");
+  background-size: cover;/*картинка заполянт всю ширину крточыки*/
+}
+
+.card-2{
+  background-image: url("../img/crossy.png");
+  background-size: cover;
+}
+
+.card-3{
+  padding-top: 35px;
+  padding-bottom: 60px;
+  background-color:  #CCD5E6;
+  background-image: url("../img/girl.png");
+  background-size: contain;
+  background-position: top right 60px;
+}
+
+.card-4{
+  padding-top: 35px;
+  padding-left: 25px;
+  background-image: url("../img/girlwithred.png");
+  background-size: cover;
+  background-color: #FF4F52;
+  
+}
+
+.card-title{
+  max-width: 221px;
+  font-family: 'Roboto Slab', serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 30px;
+  margin: 0;
+  
+}
+
+.card-text{
+  max-width: 175px;
+  margin-bottom: 25px;
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #4B5157;
+}
+
+.card-2 .card-title, 
+.card-2 .card-text{
+  color: #ffffff;
+}
+
+.card-3 .card-title{
+  max-width: 418px;
+  font-size: 40px;
+  line-height: 50px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.card-3 .card-text{
+  max-width: 319px;
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.card-3 .button-text{
+  margin-right: 12px;
+}
+
+
+.card-4 .card-title,
+.card-4 .card-text{
+  color: #ffffff;
+}
+
+
+.card-4 .card-title{
+  max-width: 209px;
+}
+
+.card-4 .card-text{
+  margin-bottom: 15px;
+}
+
+.card-price{
+  color: #ffffff;
 }
