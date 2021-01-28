@@ -3,6 +3,16 @@
   box-sizing: border-box;
 }
 
+a{
+  text-decoration: none;
+}
+
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 body{
   margin:0;
   font-family: 'Lato', sans-serif;
@@ -127,11 +137,8 @@ body{
 .card{
   min-height: 370px; /*дя переполнения тектсом, чтоб тектс не вылезал, карчока бдет увеличиваться по высоте */
   background-color: rgba(0, 0, 0, 0.25);
-  
   background-repeat: no-repeat;
-  
   background-position: top right;
-
   border-radius: 10px;
   padding-left: 45px;
   padding-right: 45px;
@@ -230,4 +237,106 @@ body{
 
 .card-price{
   color: #ffffff;
+}
+
+
+.section-title{
+  font-style: normal;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 30px;
+  font-family: 'Roboto Slab', serif;
+}
+
+.more{
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 20px;
+  color: #262D33;
+  font-family: 'Lato', sans-serif;
+  padding: 10px; /*чтобы при нажатии , не надо было целится в текст*/
+}
+
+.goods-card{
+  position: relative; /*лейбл позициоиуем оотноситльно этго родителя*/
+  text-align: center;
+  padding-top:30px;
+  padding-right: 36px;
+  padding-bottom: 35px;
+  padding-left: 37px;
+}
+
+.goods-card .label{
+  position: absolute;
+  top: 18px;
+  left: 18px;
+}
+
+.goods-title{
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 25px;
+  font-family: 'Roboto Slab', serif;
+}
+
+
+.goods-description{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #4B5157;
+  
+}
+
+
+.goods-price{
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.footer{
+  padding: 45px 0;
+  background-color: #8F79D4;
+  color: rgba(231, 217, 255, 1);
+}
+
+.footer-menu{
+  
+}
+
+.footer-menu-item:not(:last-child){ /*у всех кроме послденего*/
+    margin-right: 45px;
+}
+
+.footer-menu-link{
+  color: #ffffff;
+  font-style: normal;
+font-weight: 900;
+font-size: 14px;
+line-height: 20px;
+}
+
+.social-link{
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.footer-line{
+
+}
+
+.top-link-text{
+  color:#fff;
+  margin-right: 15px;
+}
+
+.payment-logo{
+  vertical-align: middle;
+  margin-right: 15px;
 }
