@@ -1,4 +1,5 @@
-<!DOCTYPE html> <!--набрала знак ! , и в выпадающем спсике выбарла первую сртоку-->
+<!DOCTYPE html>
+<!--набрала знак ! , и в выпадающем спсике выбарла первую сртоку-->
 <html lang="en">
 
 <head>
@@ -8,96 +9,144 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/bootstrap-grid.min.css"><!--бутсрап подключили-->
+  <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+  <!--бутсрап подключили-->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/style.css">
-  
+
 </head>
+
+<!--https://getbootstrap.com/docs/5.0/layout/breakpoints/ брекпойнты и их классы-->
 
 <body>
   <header class="container header">
     <div class="row justify-content-between align-items-center">
-        <div class="col-2"> <!--лого занимает 2 колонки-->
-          <a  class="logo-link" href="index.html">
-            <img src="img/logo.svg" class="logo-image" alt="logo" width="128" height="18">
-          </a>
-        </div>
+      <div class="col-lg-2 col-6">
+        <!--лого занимает 2 колонки-->
+        <a class="logo-link" href="index.html">
+          <img src="img/logo.svg" class="logo-image" alt="logo" width="128" height="18">
+        </a>
+      </div>
 
-        <div class="col-6"> <!-- меню занимает 6  колонок-->
-            <nav>
-              <ul class="navigation d-flex justify-content-around">
-                <li class="navigation-item">
-                  <a href="#" class="navigation-link">Womens</a>
-                </li>
-                <li class="navigation-item">
-                  <a href="#" class="navigation-link">Mens</a>
-                </li>
-                <li class="navigation-item">
-                  <a href="#" class="navigation-link">Goods</a>
-                </li>
-                <li class="navigation-item">
-                  <a href="#" class="navigation-link">Accessories</a>
-                </li>
-                <li class="navigation-item">
-                  <a href="#" class="navigation-link">Brands</a>
-                </li>
-                <li class="navigation-item">
-                  <a href="#" class="navigation-link">Blog</a>
-                </li>
-              </ul>
-            </nav>
-        </div>
+      <div class="col-lg-6 d-none d-lg-block">
+        <!-- меню занимает 6  колонок-->
+        <nav>
+          <ul class="navigation d-flex justify-content-around">
+            <li class="navigation-item">
+              <a href="#" class="navigation-link">Womens</a>
+            </li>
+            <li class="navigation-item">
+              <a href="#" class="navigation-link">Mens</a>
+            </li>
+            <li class="navigation-item">
+              <a href="#" class="navigation-link">Goods</a>
+            </li>
+            <li class="navigation-item">
+              <a href="#" class="navigation-link">Accessories</a>
+            </li>
+            <li class="navigation-item">
+              <a href="#" class="navigation-link">Brands</a>
+            </li>
+            <li class="navigation-item">
+              <a href="#" class="navigation-link">Blog</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
 
-        <div class="col-2 d-flex justify-content-end"><!--d-flex флек контенер-->
-            <button class="button">
-              <img class="button-icon" src="img/cart.svg" alt="icon-cart" width="18" height="17">
-              <span class="button-text">Cart</span>
-            </button> 
-        </div>
-      
+      <div class="col-lg-2 col-6 d-flex justify-content-end">
+        <!--d-flex флек контенер, col-lg-2 - 2 столбца только на больших экранах-->
+        <button class="button">
+          <img class="button-icon" src="img/cart.svg" alt="icon-cart" width="18" height="17">
+          <span class="button-text">Cart</span>
+        </button>
+      </div>
+
     </div>
   </header>
 
-  <div class="slider">
-    <section class="slide slide-1"><!--1sq  слайд-->
-      <div class="container">
+  <div class="slider swiper-container"><!--swiper-container из swiper-->
+    <div class="swiper-wrapper">
+      <section class="slide slide-1 swiper-slide"> <!--1sq  слайд-->
+        <div class="container">
           <div class="row"><!--класс бустрапа-->
-              <div class="col-4 offset-lg-1"><!--класс бустрапа: 4блок шириной 4 столбца, слева отсуп на 1 столбец -->
-                  <span class="label">Bestseller</span>
-                  <h1 class="slide-title">Sweater Shocker Neck</h1>
-                  <p class="slide-descripton">Women’s pearl basic knit sweater with a round neck. 
-                    Available in several colours. Free shipping to stores.
-                  </p>
-                  <button class="button">
-                    <span class="button-price">$319</span>
-                    <span class="button-text">Shop now</span>
-                  </button>
-              </div>
+            <div class="col-lg-4 col-10 offset-lg-1">
+              <!--класс бустрапа: col-4 блок шириной 4 столбца, col-lg-4 - 4 столбца ттолько на больших экранах,  offset-lg-1 слева отсуп на 1 столбец -->
+              <span class="label">Bestseller</span>
+              <h1 class="slide-title">Sweater Shocker Neck</h1>
+              <p class="slide-descripton">Women’s pearl basic knit sweater with a round neck.
+                Available in several colours. Free shipping to stores.
+              </p>
+              <button class="button">
+                <span class="button-price">$319</span>
+                <span class="button-text">Shop now</span>
+              </button>
+            </div>
           </div>
-      </div>
-    </section>
+        </div>
+      </section>
 
-    <div class="slider-nav"><!--для кнопок переклчения сладйа-->
+      <section class="slide slide-2 swiper-slide"><!--2sq  слайд-->
+        <div class="container">
+          <div class="row"><!--класс бустрапа-->
+            <div class="col-lg-4 col-10 offset-lg-1"><!--класс бустрапа: 4блок шириной 4 столбца, offset-lg-1 слева отсуп на 1 столбец -->
+              <span class="label">New</span>
+              <h1 class="slide-title">T-short</h1>
+              <p class="slide-descripton">Women’s pearl basic knit sweater with a round neck.
+                Available in several colours. Free shipping to stores.
+              </p>
+              <button class="button">
+                <span class="button-price">$319</span>
+                <span class="button-text">Shop now</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide slide-3 swiper-slide"><!--3sq  слайд-->
+        <div class="container">
+          <div class="row"> 
+            <div class="col-lg-4 col-10 offset-lg-1"><!--класс бустрапа: 4блок шириной 4 столбца, offset-lg-1 слева отсуп на 1 столбец -->
+              <span class="label">Embroidered Hoodie</span>
+              <h1 class="slide-title">Embroidered Hoodie</h1>
+              <p class="slide-descripton">Women’s pearl basic knit sweater with a round neck.
+                Available in several colours. Free shipping to stores.
+              </p>
+              <button class="button">
+                <span class="button-price">$319</span>
+                <span class="button-text">Shop now</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+
+    <div class="slider-nav"> <!--для кнопок переклчения сладйа-->
       <div class="container">
         <div class="row justify-content-between"><!--.row>.col1*2 каждая кнока располагалется  вотдельной колонке-->
           <div class="col-1">
-              <button class="slider-button">
-                <img src="img/Arrow-prev.svg" alt="prev" width="60" height="60">
-              </button>
+            <button class="slider-button slider-button-prev">
+              <img src="img/Arrow-prev.svg" alt="prev" width="60" height="60">
+            </button>
           </div>
           <div class="col-1">
-            <button class="slider-button">
+            <button class="slider-button slider-button-next">
               <img src="img/Arrow-next.svg" alt="prev" width="60" height="60">
             </button>
           </div>
-        </div> 
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="container pt-5 pb-4">
+
+  <div class="container pt-5 pb-4"> <!--pb-4 padding-bottom, pt-5 padding-top-->
     <div class="row mb-4"><!--.col-6+.col-6+.col-9+.col-3-->
-      <div class="col-6">
-        <div class="card card-1 mb-4">
+      <div class="col-xl-6"> <!--xl- маленькие жкраны-->
+        <div class="card card-6 card-1 mb-4"><!--mb-4 margin-bottom-->
           <h3 class="card-title">
             Fashion Month Ready in Capital Shop
           </h3>
@@ -112,8 +161,8 @@
         </div>
       </div>
 
-      <div class="col-6">
-        <div class="card card-2 mb-4">
+      <div class="col-xl-6">
+        <div class="card card-6 card-2 mb-4">
           <h3 class="card-title">
             Catch the Sun: Spring Break Styles From $5.99
           </h3>
@@ -127,8 +176,8 @@
         </div>
       </div>
 
-      <div class="col-9">
-        <div class="card card-3">
+      <div class="col-xl-9 col-lg-6">
+        <div class="card card-3 mb-4">
           <span class="label">Bestseller</span>
           <h3 class="card-title">
             Poplin Top <br> With Sleeve Bow
@@ -143,7 +192,7 @@
         </div>
       </div>
 
-      <div class="col-3">
+      <div class="col-xl-3 col-lg-6">
         <div class="card card-4">
           <h3 class="card-title">
             Printed Shirt with a Bow
@@ -167,55 +216,55 @@
 
     <div class="row">
       <!--.col-3*4>.goods-card>span.label{New}+img.goods-image+h3.goods-title+p.goods-description+span.goods-price-->
-      <div class="col-3">
+      <div class="col-lg-3 col-sm-6">
         <div class="goods-card">
-            <span class="label">New</span>
-            <img src="img/goods1.png" alt="Embroidered Hoodie" class="goods-image" width="190" height="190">
-            <h3 class="goods-title">Embroidered Hoodie</h3>
-            <p class="goods-description">Yellow/Lilac/Fuchsia/Orange</p>
-            <span class="goods-price">$89</span>
-        </div>
-      </div>
-      
-      <div class="col-3">
-        <div class="goods-card">
-            <span class="label">New</span>
-            <img src="img/goods2.png" alt="Faded Beach Trousers" class="goods-image" width="190" height="190">
-            <h3 class="goods-title">Faded Beach Trousers</h3>
-            <p class="goods-description">Navy/Ochre/Black/Khaki</p>
-            <span class="goods-price">$139</span>
-        </div>
-      </div>
-      
-      <div class="col-3">
-        <div class="goods-card">
-            <span class="label">New</span>
-            <img src="img/goods3.png" alt="Text T-Shirt" class="goods-image" width="190" height="190">
-            <h3 class="goods-title">Text T-Shirt</h3>
-            <p class="goods-description">White</p>
-            <span class="goods-price">$59</span>
+          <span class="label">New</span>
+          <img src="img/goods1.png" alt="Embroidered Hoodie" class="goods-image" width="190" height="190">
+          <h3 class="goods-title">Embroidered Hoodie</h3>
+          <p class="goods-description">Yellow/Lilac/Fuchsia/Orange</p>
+          <span class="goods-price">$89</span>
         </div>
       </div>
 
-      
-      <div class="col-3">
+      <div class="col-lg-3 col-sm-6">
         <div class="goods-card">
-            <span class="label">New</span>
-            <img src="img/goods4.png" alt="Striped Long Sleeve Shirt" class="goods-image" width="190" height="190">
-            <h3 class="goods-title">Striped Long Sleeve Shirt</h3>
-            <p class="goods-description">Red/Sky Blue</p>
-            <span class="goods-price">$119</span>
+          <span class="label">New</span>
+          <img src="img/goods2.png" alt="Faded Beach Trousers" class="goods-image" width="190" height="190">
+          <h3 class="goods-title">Faded Beach Trousers</h3>
+          <p class="goods-description">Navy/Ochre/Black/Khaki</p>
+          <span class="goods-price">$139</span>
         </div>
       </div>
-     </div>
+
+      <div class="col-lg-3 col-sm-6">
+        <div class="goods-card">
+          <span class="label">New</span>
+          <img src="img/goods3.png" alt="Text T-Shirt" class="goods-image" width="190" height="190">
+          <h3 class="goods-title">Text T-Shirt</h3>
+          <p class="goods-description">White</p>
+          <span class="goods-price">$59</span>
+        </div>
+      </div>
+
+
+      <div class="col-lg-3 col-sm-6">
+        <div class="goods-card">
+          <span class="label">New</span>
+          <img src="img/goods4.png" alt="Striped Long Sleeve Shirt" class="goods-image" width="190" height="190">
+          <h3 class="goods-title">Striped Long Sleeve Shirt</h3>
+          <p class="goods-description">Red/Sky Blue</p>
+          <span class="goods-price">$119</span>
+        </div>
+      </div>
+    </div>
   </div>
-  
+
   <footer class="footer">
     <div class="container">
       <div class="row justify-content-between">
-        <div class="col-7">
+        <div class="col-xl-7 mb-4 mb-xl-0">
           <nav>
-            <ul class="footer-menu d-flex">
+            <ul class="footer-menu d-sm-flex">
               <li class="footer-menu-item">
                 <a href="#" class="footer-menu-link">Shop</a>
               </li>
@@ -238,37 +287,38 @@
           </nav>
         </div>
 
-        <div class="col-3 d-flex align-items-center">
-            <span class="footer-text">
-              Follow Us
-            </span>
-            <!--div.footer-social>a.social-link-->
-            <span class="footer-social d-inline-flex align-items-center"><!--d-inline-flex чтоб элементв располаогались рядом  с надписью, а непеносились на след строку-->
-              <a href="#" class="social-link">
-                  <img src="img/Facebook.svg" alt="Facebook" width="20" height="20">
-              </a>
-              <a href="#" class="social-link" width="20" height="20">
-                  <img src="img/Twitter.svg" alt="Twitter">
-              </a>
-              <a href="#" class="social-link" width="20" height="20">
-                  <img src="img/Instagram.svg" alt="Instagram">
-              </a>
-            </span>
+        <div class="col-lg-3 d-flex align-items-center">
+          <span class="footer-text">
+            Follow Us
+          </span>
+          <!--div.footer-social>a.social-link-->
+          <span class="footer-social d-inline-flex align-items-center">
+            <!--d-inline-flex чтоб элементв располаогались рядом  с надписью, а непеносились на след строку-->
+            <a href="#" class="social-link">
+              <img src="img/Facebook.svg" alt="Facebook" width="20" height="20">
+            </a>
+            <a href="#" class="social-link" width="20" height="20">
+              <img src="img/Twitter.svg" alt="Twitter">
+            </a>
+            <a href="#" class="social-link" width="20" height="20">
+              <img src="img/Instagram.svg" alt="Instagram">
+            </a>
+          </span>
 
         </div>
-        <div class="col-2 d-flex justify-content-end">
+        <div class="col-xl-2 col-lg-3 d-flex justify-content-lg-end mt-4 mt-lg-0">
           <span class="footer-text">© 2019 Universal UI Kit</span>
         </div>
       </div>
       <hr class="footer-line mt-4 mb-4" color="#D8BFFF" size="1">
       <div class="row justify-content-between">
-        <div class="col-4">
+        <div class="col-lg-4 col-sm-9">
           <img class="payment-logo" src="img/visa.svg" alt="visa"  width="62" height="30">
-          <img class="payment-logo" src="img/mastercard.svg" alt="mastercard" width="38" height="30">
+          <img class="payment-logo" src="img/mastercard.svg" alt="mastercard"  width="38" height="30">
           <img class="payment-logo" src="img/paypal.svg" alt="paypal" width="74" height="30">
           <img class="payment-logo" src="img/bitcoin.svg" alt="bitcoin" width="90" height="30">
         </div>
-        <div class="col-2 d-flex justify-content-end">
+        <div class="col-lg-4 col-sm-1 d-flex justify-content-end">
           <a href="#" class="top-link d-flex align-items-center">
             <span class="top-link-text">Top</span>
             <img src="img/Round with small icon.svg" alt="top arrow" width="40" height="40">
@@ -277,6 +327,9 @@
       </div>
     </div>
   </footer>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!--отсюда взяли ссылку https://swiperjs.com/get-started-->
+  <script src="js/main.js"></script>
 </body>
 
 </html>

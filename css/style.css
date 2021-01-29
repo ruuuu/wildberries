@@ -74,7 +74,7 @@ body{
 .slide{
   padding-top: 90px;
   padding-bottom: 110px;
-
+  min-height: 568px; /*из макета, чтобы слайды были одинаковой высоты*/
 }
 
 .slide-1{
@@ -83,6 +83,22 @@ body{
   background-repeat: no-repeat;
   background-size: 935px 570px;
   background-position: top right 120px; /*в правый верхний  угол отправляем картинку  и  смещаем на 120 от правого края */
+}
+
+.slide-2{
+  background-color:  #13be21;
+  background-image: url("../img/background.png");
+  background-repeat: no-repeat;
+  background-size: 935px 570px;
+  background-position: top right 120px;
+}
+
+.slide-3{
+  background-color:  #c5d81b;
+  background-image: url("../img/background.png");
+  background-repeat: no-repeat;
+  background-size: 935px 570px;
+  background-position: top right 120px;
 }
 
 .label{
@@ -120,7 +136,7 @@ body{
   top: 50%; /*отступ от верхнего края  родителя*/
   width: 100%;
   transform: translateY(-50%);/*сдвиг по оси у вверх*/
-
+  z-index: 9; /*чтобы кнопки появились наверху*/
 }
 
 .slider-button{
@@ -339,4 +355,42 @@ line-height: 20px;
 .payment-logo{
   vertical-align: middle;
   margin-right: 15px;
+}
+
+
+
+@media(max-width: 1200px){/*небольше 1200*/
+  .slide-1{
+    background-size: cover; /*картинка заполняет все протсрантсов*/
+  }
+
+  .card-3{
+    background-size: cover; 
+  }
+  
+}
+
+@media(max-width: 992px){/*небольше 992*/
+  .slider-nav{
+    display:none;
+  }
+}
+
+@media(max-width: 576px){/*небольше 576*/
+  .slide-title{
+    font-size: 36px;
+    line-height: 1.4;
+    margin-bottom: 0;
+  }
+
+  .card{
+    background-position: left top;
+    padding: 30px;
+    min-height: 300px;
+  }
+
+  .card-3{
+    background-position: right top;
+  }
+  
 }
